@@ -10,7 +10,11 @@
 ### GNU/Linux
 * Linux 系统终端下命令：  
 使用wget或curl，以wget为例：  
-开启终端(快捷键为"Ctrl + Alt + T")输入`wget https://raw.githubusercontent.com/racaljk/hosts/master/hosts_tool/script_tool_for_linux.sh -O - | sudo bash -`
+开启终端(快捷键为"Ctrl + Alt + T")输入
+
+`wget https://raw.githubusercontent.com/racaljk/hosts/master/hosts_tool/script_tool_for_linux.sh -O - | sudo bash -`
+
+
 <br>按下述方法令其生效
 
 ### 修改hosts后生效的方法
@@ -20,6 +24,9 @@
 * Linux  
 终端输入`sudo systemctl restart NetworkManager`
 <br>非systemd发行版，终端输入`sudo rcnscd restart`
+<br>ubuntu 14.04 (上面两个都不可,下面测试可用)
+`sudo initctl stop network-manager` && `sudo initctl start network-manager`
+
   
 * Mac OS X  
 终端输入`sudo killall -HUP mDNSResponder`
